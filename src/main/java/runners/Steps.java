@@ -15,16 +15,7 @@ import pageObjects.ProductListingPage;
 public class Steps {
 	WebDriver driver;
 	
-	@Given("^user is on Home Page$")
-	public void user_is_on_Home_Page(){
-		System.setProperty("webdriver.ie.driver","C://Users//Vinoth//temp//chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver","C://Users//Vinoth//temp//IEdriver//IEDriverServer.exe");
-		//driver = new InternetExplorerDriver();
-	    driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get("http://www.shop.demoqa.com");
-	}
+
 
 	@When("^he search for \"(.*?)\"$")
 	public void he_search_for(String product)  {
@@ -32,12 +23,7 @@ public class Steps {
 		home.perform_Search(product);
 	}
 
-	@When("^choose to buy the first item$")
-	public void choose_to_buy_the_first_item() {
-		ProductListingPage productListingPage = new ProductListingPage(driver);
-		productListingPage.select_Product(0);
-		productListingPage.clickOn_AddToCart();		
-	}
+	
 
 	@When("^moves to checkout from mini cart$")
 	public void moves_to_checkout_from_mini_cart(){
@@ -52,12 +38,14 @@ public class Steps {
 		checkoutPage.fill_PersonalDetails();	
 	}
 	
+	//test321321
+	
 	@When("^select same delivery address$")
 	public void select_same_delivery_address() throws InterruptedException{
 		CheckoutPage checkoutPage = new CheckoutPage(driver);
 		checkoutPage.check_ShipToDifferentAddress(false);
 	}
-	
+	//test branch
 	@When("^select payment method as \"(.*?)\" payment$")
 	public void select_payment_method_as_payment(String arg1){
 		CheckoutPage checkoutPage = new CheckoutPage(driver);

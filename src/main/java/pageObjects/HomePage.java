@@ -12,12 +12,15 @@ public class HomePage {
 	}
 	
 	public void perform_Search(String search) {
-		driver.navigate().to("http://shop.demoqa.com/?s=" + search + "&post_type=product");
+		//driver.navigate().to("http://shop.demoqa.com/?s=" + search + "&post_type=product");
+		
+		//driver.navigate().to("http://shop.demoqa.com/?s=dress&post_type=product");
 		
 	}
 	
 	public void navigateTo_HomePage() {
-		driver.get("http://www.shop.demoqa.com");
+		//driver.get("http://www.shop.demoqa.com");
+		driver.get("http://shop.demoqa.com/?s=dress&post_type=product");
 	}
 
 }
