@@ -29,7 +29,7 @@ public class Steps2 {
 	    driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		//driver.get("http://www.shop.demoqa.com");
+		driver.get("http://www.shop.demoqa.com");
 		
 		driver.get("http://shop.demoqa.com/?s=dress&post_type=product");
 	}
