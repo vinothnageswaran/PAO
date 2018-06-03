@@ -13,6 +13,7 @@ public class HomePage {
 	
 	public void perform_Search(String search) {
 		driver.navigate().to("http://shop.demoqa.com/?s=" + search + "&post_type=product");
+		
 	}
 	
 	public void navigateTo_HomePage() {
