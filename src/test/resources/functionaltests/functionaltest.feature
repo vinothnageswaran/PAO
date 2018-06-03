@@ -13,7 +13,7 @@ Feature: Vocera login
     Then verify the "Logon"
     
     Examples:
-    |Username|Password1|
+    |Username|Password11|
     |he119941|Password123|
 
 
