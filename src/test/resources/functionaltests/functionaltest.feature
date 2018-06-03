@@ -1,20 +1,15 @@
-Feature: Vocera login
-
-  Scenario: Vocera login Successful
-    When I open "https://pch-vmp-test.health.wa.gov.au/" website
-    Then I login using credentials "he119941" and "Password123"
-    Then Click "Submit"
-    Then verify the "Logon"
-
-   Scenario Outline: Vocera login unsuccessful
-    Given I open "https://pch-vmp-test.health.wa.gov.au/" website
-  	When I login using credentials "<Username>" and "<Password>"
-    And Click "Submit"
-    Then verify the "Logon"
+Feature: Automated E2E Tests
+  Scenario: Customer place an order by purchasing an item for search
+  
+  	Given user is on Home Page
+    When he search for "dress"
+    And choose to buy the first item
+    And moves to checkout from mini cart
+    And enter personal details on checkout page
+    And select same delivery address
+    And select payment method as "check" payment
+    And place the order
     
-    Examples:
-    |Username|Password11|
-    |he119941|Password123|
 
 
     

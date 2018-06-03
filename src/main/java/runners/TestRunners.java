@@ -1,6 +1,6 @@
 package runners;
 import org.junit.runner.RunWith;
-import org.junit.runner.*;
+
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
@@ -9,5 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "src/test/resources/functionalTests"
 		)
+
+//Test Runners
 public class TestRunners {
 }
